@@ -1,11 +1,9 @@
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";
 import './login.css'
-import backgroundImage from './plus.png';
 import React,{useState} from 'react';
 import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
-import { Form } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'; 
 import { Link } from 'react-router-dom';
 
@@ -23,6 +21,7 @@ export default function Login() {
     ]
     const login=()=>
     {
+      debugger
       let i=0;
       const index = details.findIndex((element) => element.key === password);
       console.log("tzivi",details[index])
@@ -44,7 +43,7 @@ export default function Login() {
         {/* אם יהיה זמן לעשות שעובר דף בלחיצה על אנטר */}
         <InputText type="password"  id="password" toggleMask onChange={(e)=>setPassword(e.target.value)}/><br/>
        {/* <Password  id="password" toggleMask onChange={(e)=>setPassword(e.target.value)}/><br/> */}
-       <Button label="הכנסי" className="p-button-raised p-button-secondary" onClick={()=>login()} /><br/>
+       <Button label="כניסה" className="p-button-raised p-button-secondary" onClick={()=>login()} /><br/>
        {/* <Link to={`/fillout/${rocketId}`}>Go to FILLOUT Form</Link> */}
       </div>  
     </div>
