@@ -41,7 +41,7 @@ export default function Login() {
       <div id="form">
         <label>לכניסה הקישי קוד אישי</label><br/>
         {/* אם יהיה זמן לעשות שעובר דף בלחיצה על אנטר */}
-        <InputText type="password"  id="password" toggleMask onChange={(e)=>setPassword(e.target.value)}/><br/>
+        <InputText type="password"  id="password" onChange={(e)=>setPassword(e.target.value)}/><br/>
        {/* <Password  id="password" toggleMask onChange={(e)=>setPassword(e.target.value)}/><br/> */}
        <Button label="כניסה" className="p-button-raised p-button-secondary" onClick={()=>login()} /><br/>
        {/* <Link to={`/fillout/${rocketId}`}>Go to FILLOUT Form</Link> */}
